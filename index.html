@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PowerFit Gym Management System</title>
+    <style>
+        /* General Styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #111; color: #fff; line-height: 1.6; }
+        a { text-decoration: none; color: #fff; }
+        
+        /* Header & Navigation */
+        header { background: #000; padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; position: fixed; width: 100%; top: 0; z-index: 1000; border-bottom: 2px solid #ff4500; }
+        .logo { font-size: 24px; font-weight: bold; color: #ff4500; text-transform: uppercase; }
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin: 0 15px; }
+        nav ul li a:hover { color: #ff4500; transition: 0.3s; }
+
+        /* Hero Section (Home) */
+        .hero { height: 100vh; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://source.unsplash.com/1600x900/?gym,fitness'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding-top: 60px; }
+        .hero h1 { font-size: 50px; margin-bottom: 20px; }
+        .hero span { color: #ff4500; }
+        .hero p { font-size: 18px; max-width: 600px; margin-bottom: 30px; }
+        .btn { padding: 12px 30px; background: #ff4500; color: #fff; border: none; font-size: 16px; cursor: pointer; border-radius: 5px; transition: 0.3s; }
+        .btn:hover { background: #e03e00; }
+
+        /* Sections General */
+        section { padding: 80px 20px; text-align: center; }
+        h2 { font-size: 36px; margin-bottom: 40px; color: #ff4500; text-transform: uppercase; }
+
+        /* About Section */
+        .about-content { max-width: 800px; margin: 0 auto; color: #ccc; }
+
+        /* Membership Section */
+        .plans { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .card { background: #222; padding: 30px; width: 300px; border-radius: 10px; border: 1px solid #333; transition: 0.3s; }
+        .card:hover { transform: translateY(-10px); border-color: #ff4500; }
+        .card h3 { font-size: 24px; margin-bottom: 15px; }
+        .price { font-size: 30px; color: #ff4500; margin-bottom: 20px; font-weight: bold; }
+        .features { list-style: none; margin-bottom: 20px; text-align: left; padding-left: 20px; }
+        .features li { margin-bottom: 10px; }
+
+        /* Contact Section */
+        .contact form { max-width: 500px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px; }
+        input, textarea { padding: 15px; background: #222; border: 1px solid #444; color: #fff; border-radius: 5px; }
+        input:focus, textarea:focus { outline: none; border-color: #ff4500; }
+
+        /* Footer */
+        footer { background: #000; padding: 20px; text-align: center; border-top: 1px solid #333; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">PowerFit Gym</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#membership">Membership</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <h1>Build Your Body <br> <span>Transform Your Life</span></h1>
+        <p>Welcome to the best Gym Management System. Join us today to start your fitness journey with professional trainers.</p>
+        <button class="btn">Join Now</button>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <div class="about-content">
+            <p>At PowerFit Gym, we believe in providing a state-of-the-art facility for everyone. Whether you are a beginner or a pro athlete, our management system ensures you get the best scheduling, trainer support, and equipment access.</p>
+        </div>
+    </section>
+
+    <!-- Membership Section -->
+    <section id="membership">
+        <h2>Membership Plans</h2>
+        <div class="plans">
+            <div class="card">
+                <h3>Basic</h3>
+                <div class="price">$30/mo</div>
+                <ul class="features">
+                    <li>✅ Gym Access</li>
+                    <li>✅ Locker Room</li>
+                    <li>❌ Personal Trainer</li>
+                </ul>
+                <button class="btn">Choose Plan</button>
+            </div>
+            <div class="card">
+                <h3>Pro</h3>
+                <div class="price">$50/mo</div>
+                <ul class="features">
+                    <li>✅ Gym Access</li>
+                    <li>✅ Locker & Showers</li>
+                    <li>✅ Group Classes</li>
+                </ul>
+                <button class="btn">Choose Plan</button>
+            </div>
+            <div class="card">
+                <h3>Elite</h3>
+                <div class="price">$80/mo</div>
+                <ul class="features">
+                    <li>✅ 24/7 Access</li>
+                    <li>✅ Personal Trainer</li>
+                    <li>✅ Nutrition Plan</li>
+                </ul>
+                <button class="btn">Choose Plan</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message"></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 PowerFit Gym Management System. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
